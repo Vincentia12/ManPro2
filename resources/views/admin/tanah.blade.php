@@ -22,7 +22,7 @@
     @csrf
 
     <div class="card shadow mb-3 ">
-        <div class="card-header py-2 " style="background-color: #4b77be;">
+        <div class="card-header py-2 " style="background-color: #52b3d9;">
             <h6 class="m-0 font-weight-bold text-white text-center">Masukkan Data Aset Tanah</h6>
         </div>
         <div class="card-body">

@@ -19,6 +19,18 @@ class TanahController extends Controller
         $tanah = Tanah::all();
 
         return view(
+            'admin.laporan_tanah',
+            ['pemilik' => $pemilik],
+            ['tanah' => $tanah],
+        )->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function tambah()
+    {
+        $pemilik = Pemilik::all();
+        $tanah = Tanah::all();
+
+        return view(
             'admin.tanah',
             ['pemilik' => $pemilik],
             ['tanah' => $tanah],
@@ -54,9 +66,10 @@ class TanahController extends Controller
             'harga' => 'required'
         ]);
 
-        Tanah::create($request->post());
+        Tanah::create($request->all());
 
-        return redirect()->to('tanah');
+        return redirect()->route('tanah.index')
+            ->with('success', 'Data Tanah Berhasil Ditambahkan');
     }
 
     /**

@@ -7,6 +7,7 @@ use App\Http\Controllers\GuestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PemilikController;
 use App\Http\Controllers\TanahController;
+use App\Http\Controllers\LaporanTanahController;
 use Illuminate\Contracts\View\View as ViewView;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,18 +38,27 @@ Route::get('/verified-create', function () {
 
 //tambah data
 // route untuk input data yg belum terverifikasi
-Route::get('/tanah', function () {
+Route::get('/tambah_tanah', function () {
     return view('admin.tanah');
 });
-Route::get('/pemilik', function () {
-    return view('admin.pemilik');
-});
+// Route::get('/tambah_pemilik', function () {
+//     return view('admin.pemilik');
+// });
 // Route::get('/editpemilik', function () {
 //     return view('admin.editpemilik');
 // });
 Route::get('/lihat', function () {
     return view('admin.lihat');
 });
+
+//route tanah
+Route::resource('/tanah', TanahController::class);
+Route::get('/tambah_tanah', [TanahController::class, 'tambah']);
+
+//route pemilik
+Route::resource('/pemilik', PemilikController::class);
+Route::get('/tambah_pemilik', [PemilikController::class, 'tambah']);
+
 //andtambahdata
 
 Auth::routes();
@@ -75,8 +85,8 @@ Route::get('/pengguna', [view::class, 'pengguna'])->name('pengguna');
 Route::resource('/asets', AsetController::class);
 Route::resource('/delete', view::class);
 
-Route::resource('/pemilik', PemilikController::class);
-Route::resource('/tanah', TanahController::class);
+
+
 // Route::resource('/pengguna', View::class);
 // Route::resource('/save', App\Http\Controllers\view::class,'save');
 

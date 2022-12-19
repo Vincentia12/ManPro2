@@ -26,27 +26,27 @@
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-expand navbar-light topbar mb-auto static-top shadow" style="background-color: #2F8F9D;">
+    <nav class="navbar navbar-expand navbar-light topbar mb-auto static-top shadow" style="background-color: #4b77be;">
 
         <!-- Sidebar Toggle (Topbar) -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center text-dark" href="/guest">
             <div class="sidebar-brand-icon">
-               <img src="img/logo.png" alt="Image" width="110px" height="39px" >
+               <img src="img/logo4.png" alt="Image" width="110px" height="35px" >
             </div>
         </a>
         {{-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
         </button> --}}
         {{-- <div class="col-lg-4 mt-3" > --}}
-        <div class="col-lg-7 mt-3" >
+        <!-- <div class="col-lg-7 mt-3" >
             <span style="color : #c8c8c8;">
                 Pusat Informasi Inventarisasi Aset Tanah
             </span>
             <p class="text-white">
                 Provinsi Jawa Timur
             </p>
-        </div>
-        <div class="col-lg-4 mt-1" id="navbarNav">
+        </div> -->
+        <!-- <div class="col-lg-4 mt-1" id="navbarNav">
               <ul class="navbar-nav nav justify-content-end">
                 <li class="nav-item active">
                   <a class="nav-link" href="/guest">Beranda</a>
@@ -58,7 +58,7 @@
                   <a class="nav-link" href="">Laporan Evaluasi</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
           {{-- </nav> --}}
 
         <!-- Topbar Search -->
@@ -110,7 +110,7 @@
                 <!-- End of Main Content -->
 
                    <!-- Footer -->
-            <footer class="sticky-footer " style="background-color: #2F8F9D;">
+            <!-- <footer class="sticky-footer " style="background-color: #2F8F9D;">
                 <div class="container my-auto">
                     {{-- <div class="copyright text-center my-auto">
                         <span>Copyright &copy; PUSDA Website 2022</span>
@@ -119,7 +119,7 @@
                         <span class="text-white">Dinas Pekerjaan Umum Sumber Daya Air</span>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
             <!-- End of Footer -->
 
         </div>

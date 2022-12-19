@@ -56,7 +56,7 @@
         </div>
     </div> --}}
     
-    <div class="col-xl-4 col-md-7 mb-5">
+    <!-- <div class="col-xl-4 col-md-7 mb-5">
         <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
@@ -101,11 +101,11 @@
                 </div>
             </div>
         </div>         
-    </div>
+    </div> -->
 </div>
 
 <div class="card shadow mb-4">
-    <div class="card-header py-3" style="background-color: #40B9CB;">
+    <div class="card-header py-3" style="background-color: #52b3d9;">
         <h6 class="m-0 font-weight-bold text-white">Sebaran Aset</h6>
     </div>
     <div class="card-body">
@@ -187,7 +187,7 @@
     <!-- Area Chart -->
     <div class="card shadow mb-4 text-center my-3 col-12">
     {{-- <div class="card shadow mb-4"> --}}
-        <div class="card-header text-white" style="background-color: #40B9CB;">
+        <div class="card-header text-white" style="background-color: #52b3d9;">
             Index Aset Terdata
         </div>
         <canvas id="myChart" width="400" height="100"></canvas>
@@ -236,7 +236,7 @@
         );
       </script>
                         
-        <div class="card-footer text-white" style="background-color: #40B9CB;">
+        <div class="card-footer text-white" style="background-color: #52b3d9;">
             2 days ago
         </div>
     </div>

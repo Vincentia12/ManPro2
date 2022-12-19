@@ -26,25 +26,13 @@
                         <center>No.</center>
                     </th>
                     <th>
-                        <center>Jenis Cluster</center>
+                        Jenis Cluster
                     </th>
                     <th>
-                        <center>Lebar</center>
+                        Blok / Nomor Rumah
                     </th>
                     <th>
-                        <center>Panjang</center>
-                    </th>
-                    <th>
-                        <center>Luas</center>
-                    </th>
-                    <th>
-                        <center>Blok</center>
-                    </th>
-                    <th>
-                        <center>Nomor Rumah</center>
-                    </th>
-                    <th>
-                        <center>Harga</center>
+                        Nama Pemilik
                     </th>
                     <th>
                         <center>Action</center>
@@ -52,24 +40,28 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($tanah as $tn)
+                @foreach ($pemilik as $item)
                 <tr>
-                    <td>{{ ++$i }}</td>
-                    <td>{{ $tn->jenis_klaster }}</td>
-                    <td>{{ $tn->lebar }}</td>
-                    <td>{{ $tn->panjang}}</td>
-                    <td>{{ $tn->luas}}</td>
-                    <td>{{ $tn->blok}}</td>
-                    <td>{{ $tn->no_rumah}}</td>
-                    <td>{{ $tn->harga}}</td>
+                    <td>
+                        <center>{{ ++$i }}.</center>
+                    </td>
+                    <td>
+                        {{ $item->tanah->jenis_klaster }}
+                    </td>
+                    <td>
+                        {{ $item->tanah->blok }} / {{ $item->tanah->no_rumah }}
+                    </td>
+                    <td>
+                        {{ $item->nama }}
+                    </td>
                     <td>
                         <center>
-                            <form action="{{ route('tanah.destroy',$tn->id) }}" method="POST">
+                            <form action="{{ route('pemilik.destroy',$item->id) }}" method="POST">
 
-                                <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#modalDetailTanah{{$tn->id}}">
+                                <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#modalDetailPemilik{{$item->id}}">
                                     Detail
                                 </button>
-                                <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalEditTanah{{$tn->id}}">
+                                <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modalEditPemilik{{$item->id}}">
                                     Edit
                                 </button>
                                 @csrf
@@ -90,14 +82,13 @@
     </div>
 </div>
 
-
 <!-- Modal Edit Tanah -->
-@foreach ( $tanah as $tnh )
-<div class="modal fade" id="modalEditTanah{{$tnh->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditTanahLabel" aria-hidden="true">
+@foreach ( $pemilik as $pmk )
+<div class="modal fade" id="modalEditPemilik{{$pmk->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPemilikLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><b>Edit Data Pengadaan</b></h5>
+                <h5 class="modal-title"><b>Edit Data Pemilik</b></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -109,49 +100,54 @@
                     {{ session()->get('message') }}
                 </div>
                 @endif
-                <form method="POST" action="{{ url('tanah/update', $tnh->id) }}">
+                <form method="POST" action="{{ url('pemilik/update', $pmk->id) }}">
                     @csrf
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Jenis Cluster</label>
                         <select class="form-control" name="jenis_klaster">
-                            <option value="{{$tnh->jenis_klaster}}">-{{ $tnh->jenis_klaster }} </option>
+                            <option value="{{$pmk->jenis_klaster}}">-{{ $pmk->tanah->jenis_klaster }} Blok {{ $pmk->tanah->blok }} / {{ $pmk->tanah->no_rumah }}</option>
                             <option value=""></option>
                             <option value="">Pilih Jenis Cluster</option>
-                            <option value="Anggrek">Anggrek</option>
-                            <option value="Jasmine">Jasmine</option>
-                            <option value="Maple">Maple</option>
+                            @foreach ($tanah as $item)
+                            <option value="{{$item->id}}">{{ $item->jenis_klaster}} Blok {{ $item->blok}}</option>
+                            @endforeach
                         </select>
                         <small class="text-danger">{{ $errors->first('jenis_klaster') }}</small>
                     </div>
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Lebar</label>
-                        <input type="text" class="form-control" id="lebar" name="lebar" value="{{ $tnh->lebar }}">
-                        <small class="text-danger">{{ $errors->first('lebar') }}</small>
+                        <label for="message-text" class="col-form-label">Nama Pemilik</label>
+                        <input type="text" class="form-control" id="nama" name="nama" value="{{ $pmk->nama }}">
+                        <small class="text-danger">{{ $errors->first('nama') }}</small>
                     </div>
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Panjang</label>
-                        <input type="text" class="form-control" id="panjang" name="panjang" value="{{ $tnh->panjang }}">
-                        <small class="text-danger">{{ $errors->first('panjang') }} </small>
+                        <label for="message-text" class="col-form-label">Nomor KTP</label>
+                        <input type="text" class="form-control" id="no_ktp" name="no_ktp" value="{{ $pmk->no_ktp }}">
+                        <small class="text-danger">{{ $errors->first('no_ktp') }} </small>
                     </div>
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Luas</label>
-                        <input type="text" class="form-control" id="luas" name="luas" value="{{ $tnh->luas }}">
-                        <small class="text-danger">{{ $errors->first('luas') }} </small>
+                        <label for="message-text" class="col-form-label">Tempat Lahir</label>
+                        <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" value="{{ $pmk->tempat_lahir }}">
+                        <small class="text-danger">{{ $errors->first('tempat_lahir') }} </small>
                     </div>
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Blok</label>
-                        <input type="text" class="form-control" id="blok" name="blok" value="{{ $tnh->blok }}">
-                        <small class="text-danger">{{ $errors->first('blok') }}</small>
+                        <label for="message-text" class="col-form-label">Tanggal Lahir</label>
+                        <input type="text" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="{{ $pmk->tanggal_lahir }}">
+                        <small class="text-danger">{{ $errors->first('tanggal_lahir') }}</small>
                     </div>
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Nomor Rumah</label>
-                        <input type="text" class="form-control" id="no_rumah" name="no_rumah" value="{{ $tnh->no_rumah }}">
-                        <small class="text-danger">{{ $errors->first('no_rumah') }}</small>
+                        <label for="message-text" class="col-form-label">Pekerjaan</label>
+                        <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" value="{{ $pmk->pekerjaan }}">
+                        <small class="text-danger">{{ $errors->first('pekerjaan') }}</small>
                     </div>
                     <div class="mb-4">
-                        <label for="message-text" class="col-form-label">Harga Unit</label>
-                        <input type="text" class="form-control" id="harga" name="harga" value="{{ $tnh->harga }}">
-                        <small class="text-danger">{{ $errors->first('harga') }}</small>
+                        <label for="message-text" class="col-form-label">Alamat</label>
+                        <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $pmk->alamat }}">
+                        <small class="text-danger">{{ $errors->first('alamat') }}</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message-text" class="col-form-label">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="no_tlp" name="no_tlp" value="{{ $pmk->no_tlp }}">
+                        <small class="text-danger">{{ $errors->first('no_tlp') }}</small>
                     </div>
 
                     <div class="modal-footer mt-3">
@@ -165,13 +161,13 @@
 </div>
 @endforeach
 
-<!-- Modal Detail Tanah -->
-@foreach ( $tanah as $list )
-<div class="modal fade" id="modalDetailTanah{{$list->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditJadwalLabel" aria-hidden="true">
+<!-- Modal Detail Pemilik -->
+@foreach ( $pemilik as $pm )
+<div class="modal fade" id="modalDetailPemilik{{$pm->id}}" tabindex="-1" role="dialog" aria-labelledby="modalEditPemilikLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><b>Detail Data Jadwal</b></h5>
+                <h5 class="modal-title"><b>Detail Data Pemilik</b></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -187,54 +183,72 @@
                     <div class="mb-4">
                         <div class="form-group">
                             <tr>
-                                <td>Jenis Cluster</td>
+                                <td>Jenis Cluster / Blok</td>
                                 <td>:</td>
-                                <td>{{ $list->jenis_klaster }}</td>
+                                <td>{{ $pm->tanah->jenis_klaster }} Blok {{ $pm->tanah->blok }} / {{ $pm->tanah->no_rumah }} </td>
                             </tr>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Lebar</td>
+                                <td>Nama Pemilik</td>
                                 <td>:</td>
-                                <td>{{ $list->lebar }}</td>
+                                <td>{{ $pm->nama }}</td>
                             </tr>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Panjang</td>
+                                <td>Nomor KTP</td>
                                 <td>:</td>
-                                <td>{{ $list->panjang }}</td>
+                                <td>{{ $pm->no_ktp }}</td>
                             </tr>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Luas</td>
+                                <td>Tempat Lahir</td>
                                 <td>:</td>
-                                <td>{{ $list->luas }}</td>
+                                <td>{{ $pm->tempat_lahir }}</td>
                             </tr>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Blok / Nomor</td>
+                                <td>Tanggal Lahir</td>
                                 <td>:</td>
-                                <td>{{ $list->blok }} / {{ $list->no_rumah }}</td>
+                                <td>{{ $pm->tanggal_lahir }}</td>
                             </tr>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <tr>
-                                <td>Harga Unit</td>
+                                <td>Pekerjaan</td>
                                 <td>:</td>
-                                <td>{{ $list->harga }}</td>
+                                <td>{{ $pm->pekerjaan }}</td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Alamat</td>
+                                <td>:</td>
+                                <td>{{ $pm->alamat }}</td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <tr>
+                                <td>Telephone</td>
+                                <td>:</td>
+                                <td>{{ $pm->no_tlp }}</td>
                             </tr>
                         </div>
                     </div>
@@ -249,4 +263,10 @@
     </div>
 </div>
 @endforeach
+
+
+
+
+
+
 @endsection

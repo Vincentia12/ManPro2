@@ -66,7 +66,7 @@ class TanahController extends Controller
             'harga' => 'required'
         ]);
 
-        Tanah::create($request->all());
+        Tanah::create($request->post());
 
         return redirect()->route('tanah.index')
             ->with('success', 'Data Tanah Berhasil Ditambahkan');
@@ -91,6 +91,7 @@ class TanahController extends Controller
      */
     public function edit(tanah $tanah)
     {
+        return view('admin.laporan_tanah', compact('tanah'));
         //
     }
 
@@ -103,7 +104,9 @@ class TanahController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tanah = Tanah::find($id)->update($request->all());
+
+        return back()->with('success', ' Data telah diperbaharui!');
     }
 
     /**

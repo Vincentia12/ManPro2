@@ -54,10 +54,12 @@ Route::get('/lihat', function () {
 //route tanah
 Route::resource('/tanah', TanahController::class);
 Route::get('/tambah_tanah', [TanahController::class, 'tambah']);
+Route::post('/tanah/update/{id}', [TanahController::class, 'update']);
 
 //route pemilik
 Route::resource('/pemilik', PemilikController::class);
 Route::get('/tambah_pemilik', [PemilikController::class, 'tambah']);
+Route::post('/pemilik/update/{id}', [PemilikController::class, 'update']);
 
 //andtambahdata
 

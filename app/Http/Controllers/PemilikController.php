@@ -25,7 +25,7 @@ class PemilikController extends Controller
             // 'admin.input_pengadaan',
             ['tanah' => $tanah],
             ['pemilik' => $pemilik]
-        );
+        )->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function tambah()

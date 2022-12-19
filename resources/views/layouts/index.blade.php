@@ -34,7 +34,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center text-dark" href="{{ url('home') }}">
                 <div class="sidebar-brand-icon">
-                    <img src="{{ asset('img/logo.png') }}" alt="Image" width="110px" height="39px">
+                    <img src="{{ asset('img/logo2.png') }}" alt="Image" width="110px" height="35px">
                 </div>
             </a>
 
@@ -119,7 +119,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color: #c8c8c8;">
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color: #4b77be;">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -130,7 +130,7 @@
                         <span style="color : #383838;">
                             <b> SISTEM INFORMASI MANAJEMEN ASET TANAH </b>
                         </span>
-                        <p style="color: #787878">
+                        <p style="color: #ffff">
                             <b> DI PERUMAHAN D’GARDEN CITY MOJOKERTO </b>
                         </p>
                     </div>
@@ -187,13 +187,13 @@
                 <!-- Footer -->
                 {{-- <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow"> --}}
 
-                <footer class="sticky-footer" style="background-color: #c8c8c8;">
+                <!-- <footer class="sticky-footer" style="background-color: #c8c8c8;">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
                             <span class="text-white">PERUMAHAN D’GARDEN CITY MOJOKERTO</span>
                         </div>
                     </div>
-                </footer>
+                </footer> -->
                 <!-- End of Footer -->
             </div>
             <!-- End of Content Wrapper -->

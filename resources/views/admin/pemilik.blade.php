@@ -22,7 +22,7 @@
     @csrf
 
     <div class="card shadow mb-3 ">
-        <div class="card-header py-2 " style="background-color: #C8C8C8;">
+        <div class="card-header py-2 " style="background-color: #4b77be;">
             <h6 class="m-0 font-weight-bold text-white text-center">Masukkan Data Pemilik</h6>
         </div>
         <div class="card-body">

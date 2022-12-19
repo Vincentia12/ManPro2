@@ -11,7 +11,7 @@
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-4 col-md-7 mb-5">
-        <div class="card h-100 py-2"  style="border-left-width: 10px; border-left-color: #6d6d6d">
+        <div class="card h-100 py-2"  style="border-left-width: 10px; border-left-color: #4b77be">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -29,7 +29,7 @@
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-4 col-md-7 mb-5">
-        <div class="card h-100 py-2"  style="border-left-width: 10px; border-left-color: #6d6d6d">
+        <div class="card h-100 py-2"  style="border-left-width: 10px; border-left-color: #4b77be">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -47,7 +47,7 @@
 
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-4 col-md-7 mb-5">
-        <div class="card h-100 py-2"  style="border-left-width: 10px; border-left-color: #6d6d6d">
+        <div class="card h-100 py-2"  style="border-left-width: 10px; border-left-color: #4b77be">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">

@@ -124,7 +124,7 @@
                    
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <img src="img/logo.png" alt="logo" width="140px" height="52px">
+                                        <img src="img/logo2.png" alt="logo" width="140px" height="50px">
                                     </div><br>
                                     {{-- <form class="user"> --}}
                                     <form method="POST" action="{{ route('login') }}" >

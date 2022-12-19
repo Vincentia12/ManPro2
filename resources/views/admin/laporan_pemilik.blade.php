@@ -1,14 +1,14 @@
 @extends('layouts/index')
 @section('content')
 @section('judul')
-{{'Laporan Data Tanah'}}
+{{'Laporan Data Pemilik'}}
 @endsection
 
 
 <!-- Content Row -->
 <div class="card shadow mb-3 ">
     <div class="card-header py-2 " style="background-color: #40B9CB;">
-        <h6 class="m-0 font-weight-bold text-white text-center">Tabel Data Tanah</h6>
+        <h6 class="m-0 font-weight-bold text-white text-center">Tabel Data Pemilik</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -104,12 +104,12 @@
                     @csrf
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Jenis Cluster</label>
-                        <select class="form-control" name="jenis_klaster">
+                        <select class="form-control" name="tanah_id">
                             <option value="{{$pmk->jenis_klaster}}">-{{ $pmk->tanah->jenis_klaster }} Blok {{ $pmk->tanah->blok }} / {{ $pmk->tanah->no_rumah }}</option>
                             <option value=""></option>
                             <option value="">Pilih Jenis Cluster</option>
                             @foreach ($tanah as $item)
-                            <option value="{{$item->id}}">{{ $item->jenis_klaster}} Blok {{ $item->blok}}</option>
+                            <option value="{{$item->id}}">{{ $item->jenis_klaster}} Blok {{ $item->blok}} / {{ $item->no_rumah}}</option>
                             @endforeach
                         </select>
                         <small class="text-danger">{{ $errors->first('jenis_klaster') }}</small>

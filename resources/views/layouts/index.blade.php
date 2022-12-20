@@ -103,9 +103,9 @@
             <hr class="sidebar-divider" style="background-color: #c8c8c8;">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
+            {{-- <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle" style="background-color: #c8c8c8;"></button>
-            </div>
+            </div> --}}
 
             <!-- Sidebar Message -->
 

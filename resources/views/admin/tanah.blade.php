@@ -1,11 +1,9 @@
 @extends('layouts/index')
 @section('content')
 @section('judul')
-{{'Input Data / Tersertifikasi '}}
+{{'Input Data Tanah '}}
 @endsection
-@section('title')
-{{'Input Data yang Tersertifikasi '}}
-@endsection
+
 
 @if ($errors->any())
 <div class="alert alert-danger">
@@ -32,7 +30,12 @@
                         <div class="form-group row">
                             <label for="jenis_klaster" class="col-sm-2 col-form-label">Jenis Cluster</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="jenis_klaster" name="jenis_klaster" placeholder="Masukkan ID Tanah">
+                                <select class="form-control" name="jenis_klaster">
+                                    <option> Pilih Jenis Cluster </option>
+                                    <option value="Anggrek">Anggrek</option>
+                                    <option value="Jasmine">Jasmine</option>
+                                    <option value="Maple">Maple</option>
+                                </select>
                             </div>
                             <small class="text-danger">{{ $errors->first('jenis_klaster') }}</small>
                         </div>

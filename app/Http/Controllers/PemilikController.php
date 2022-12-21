@@ -21,6 +21,19 @@ class PemilikController extends Controller
         $pemilik = Pemilik::all();
 
         return view(
+            'admin.laporan_pemilik',
+            // 'admin.input_pengadaan',
+            ['tanah' => $tanah],
+            ['pemilik' => $pemilik]
+        )->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function tambah()
+    {
+        $tanah = Tanah::all();
+        $pemilik = Pemilik::all();
+
+        return view(
             'admin.pemilik',
             // 'admin.input_pengadaan',
             ['tanah' => $tanah],

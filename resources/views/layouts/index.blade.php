@@ -62,8 +62,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item active" href="tanah">Tanah</a>
-                        <a class="collapse-item active" href="pemilik">Pemilik</a>
+                        <a class="collapse-item active" href="tambah_tanah">Tanah</a>
+                        <a class="collapse-item active" href="tambah_pemilik">Pemilik</a>
                     </div>
                 </div>
             </li>
@@ -75,8 +75,8 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item active" href="pemilik">Tersertifikasi</a>
-                        <a class="collapse-item active" href="asets">Belum Tersertifikasi</a>
+                        <a class="collapse-item active" href="tanah">Laporan Tanah</a>
+                        <a class="collapse-item active" href="pemilik">Laporan Pemilik</a>
                     </div>
                 </div>
             </li>

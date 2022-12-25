@@ -53,7 +53,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($pemilik as $tn)
+                @foreach ($tanah as $tn)
                 <tr>
                     <td>{{ ++$i }}</td>
                     <td>{{ $tn->jenis_klaster }}</td>

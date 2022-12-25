@@ -1,11 +1,11 @@
 @extends('layouts/master')
 @section('content')
-    @section('judul')
+    {{-- @section('judul')
         {{'Inventarisasi Aset Tanah'}}
     @endsection
     @section('title')
         {{'SISTEM INFORMASI MANAJEMEN ASET TANAH '}}
-    @endsection
+    @endsection --}}
 
 <!-- Content Row -->
 <div class="row">
@@ -59,7 +59,7 @@
     <!-- <div class="col-xl-4 col-md-7 mb-5">
         <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
-                <div class="row no-gutters align-items-center">
+                <div class="row no-gutters align-tns-center">
                     <div class="col mr-2">
                         <div class="h3 font-weight-bold text-primary text-uppercase mb-0">7</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">Total Aset</div>
@@ -75,7 +75,7 @@
     <div class="col-xl-4 col-md-7 mb-5">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
-                <div class="row no-gutters align-items-center">
+                <div class="row no-gutters align-tns-center">
                     <div class="col mr-2">
                         <div class="h3 font-weight-bold text-primary text-uppercase mb-0">7</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">Total Aset Terdaftar</div>
@@ -90,7 +90,7 @@
     <div class="col-xl-4 col-md-7 mb-5">
         <div class="card border-left-info shadow h-100 py-2">
             <div class="card-body">
-                <div class="row no-gutters align-items-center">
+                <div class="row no-gutters align-tns-center">
                     <div class="col mr-2">
                         <div class="h3 font-weight-bold text-primary text-uppercase mb-0">7 </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">Total Aset Belum Terdaftar</div>
@@ -104,13 +104,13 @@
     </div> -->
 </div>
 
-<div class="card shadow mb-4">
+{{-- <div class="card shadow mb-4">
     <div class="card-header py-3" style="background-color: #52b3d9;">
         <h6 class="m-0 font-weight-bold text-white">Sebaran Aset</h6>
     </div>
     <div class="card-body">
-        <h4 class="small font-weight-bold">Belum di tandai <span
-                class="float-right">20%</span></h4>
+        <h4 class="small font-weight-bold">Belum di tandai 
+            <span class="float-right">20%</span></h4>
         <div class="progress mb-4">
             <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -134,24 +134,24 @@
                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
-</div>
+</div> --}}
 
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
+{{-- <div class="d-sm-flex align-tns-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Rencana Pembangunan</h1>
-</div>
-<div class="d-flex justify-content-around">
+</div> --}}
+{{-- <div class="d-flex justify-content-around">
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-4 col-md-7 mb-5">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
-                <div class="row no-gutters align-items-center">
+                <div class="row no-gutters align-tns-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Pembangunan Aset</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
                     </div>
                     <div class="col-auto">
-                        {{-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> --}}
+                        <!-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> -->
                         <i class="fa-solid fa-building fa-2x text-gray-300"></i>
                     </div>
                 </div>
@@ -163,11 +163,11 @@
     <div class="col-xl-4 col-md-7 mb-5">
         <div class="card border-left-info shadow h-100 py-2">
             <div class="card-body">
-                <div class="row no-gutters align-items-center">
+                <div class="row no-gutters align-tns-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1 text-white">Pelaporan Aset
                         </div>
-                        <div class="row no-gutters align-items-center">
+                        <div class="row no-gutters align-tns-center">
                             <div class="col-auto">
                                 <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">10</div>
                             </div>
@@ -180,13 +180,13 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
-<div class="row ">
-{{-- <div class="card shadow mb-4"> --}}
+{{-- <div class="row ">
+<!-- <div class="card shadow mb-4"> -->
     <!-- Area Chart -->
     <div class="card shadow mb-4 text-center my-3 col-12">
-    {{-- <div class="card shadow mb-4"> --}}
+    <!-- <div class="card shadow mb-4"> -->
         <div class="card-header text-white" style="background-color: #52b3d9;">
             Index Aset Terdata
         </div>
@@ -241,7 +241,77 @@
         </div>
     </div>
     </div>
-</div>
+</div> --}}
     
-</div>
+{{-- <div class="row" > --}}
+    <div class="card shadow mb-4">
+        <div class="card-header py-2 " style="background-color: #40B9CB;">
+            <h6 class="m-0 font-weight-bold text-white text-center">Data Pemilik Tanah</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
+                @endif
+            </div>
+            <P>ini mau aku buat dari tabel pemilik panggil tanah</P>
+    
+            <table id="data1" class="table table-bordered" cellspacing="0" style="text-align: center">
+                <thead>
+                    <tr>
+                        <th>
+                            <center>No.</center>
+                        </th>
+                        <th>
+                            <center>Jenis Cluster</center>
+                        </th>
+                        <th>
+                            <center>Lebar</center>
+                        </th>
+                        <th>
+                            <center>Panjang</center>
+                        </th>
+                        <th>
+                            <center>Luas</center>
+                        </th>
+                        <th>
+                            <center>Blok</center>
+                        </th>
+                        <th>
+                            <center>Nomor Rumah</center>
+                        </th>
+                        <th>
+                            <center>Harga</center>
+                        </th>
+                        <th>
+                            <center>Action</center>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($pemilik as $tn)
+                    <tr>
+                        <td>{{ ++$i }}</td>
+                        <td>
+                            <center>{{ ++$i }}.</center>
+                        </td>
+                        <td>
+                            {{ $tn->tanah->jenis_klaster }}
+                        </td>
+                        <td>
+                            {{ $tn->tanah->blok }} / {{ $tn->tanah->no_rumah }}
+                        </td>
+                        <td>
+                            {{ $tn->nama }}
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+{{-- </div> --}}
+
 @endsection

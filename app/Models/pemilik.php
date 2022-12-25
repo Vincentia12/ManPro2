@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class pemilik extends Model
 {
-    use HasFactory,
-    Notifiable, softdeletes;
+    use HasFactory;
+    // Notifiable, softdeletes;
     
 
     protected $fillable = [

@@ -41,6 +41,19 @@ class PemilikController extends Controller
         );
     }
 
+    // public function lokasi()
+    // {
+    //     $tanah = Tanah::all();
+    //     $pemilik = Pemilik::all();
+
+    //     return view(
+    //         'home',
+    //         // 'admin.input_pengadaan',
+    //         ['tanah' => $tanah],
+    //         ['pemilik' => $pemilik]
+    //     );
+    // }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -60,12 +73,13 @@ class PemilikController extends Controller
      */
     public function store(Request $request)
     {
+        // $tanah = $request->tanah_id;
         $request->validate([
             // 'id' => 'required',
             'tanah_id' => 'required',
             'nama' => 'required',
             'no_ktp' => 'required',
-            'tempat_lahir' => 'required',
+            // 'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'pekerjaan' => 'required',
             'alamat' => 'required',
@@ -73,6 +87,12 @@ class PemilikController extends Controller
         ]);
 
         Pemilik::create($request->post());
+    	// $tanah->delete();
+        // Tanah::deleted($request->all());
+
+        // Tanah::find($id)->update($request->all());
+        // Tanah::update($request->all());
+        // $tanah = Tanah::find($id);
 
         return redirect()->route('pemilik.index')
             ->with('success', 'Data Pemilik Berhasil Ditambahkan');

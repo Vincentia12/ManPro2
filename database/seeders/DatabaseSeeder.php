@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //\App\Models\User::factory(10)->create();
+        //\App\Models\User::factory(9)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -29,203 +29,303 @@ class DatabaseSeeder extends Seeder
         ]);
         //1
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '1',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //2
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '2',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //3
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '3',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //4
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '4',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //5
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '5',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //6
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '6',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //7
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '7',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //8
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '8',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //9
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '9',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
-        //10
+        //9
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Anggrek',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
-            'no_rumah' => '10',
-            'harga' => '6000000' * ('10' * '15'),
+            'no_rumah' => '9',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //11
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '11',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //12
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '12',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //13
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '13',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //14
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '14',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
-        //15
+        //14
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
-            'no_rumah' => '15',
-            'harga' => '1000000000',
+            'no_rumah' => '14',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //16
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '16',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         // 17
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '17',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //18
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '18',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //19
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '19',
-            'harga' => '1000000000',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
         //20 
         \App\Models\Tanah::create([
-            'jenis_klaster' => 'Rumah',
-            'lebar' => '10',
-            'panjang' => '15',
-            'luas' => '10' * '15',
+            'jenis_klaster' => 'Jasmine',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
             'blok' => 'A',
             'no_rumah' => '20',
-            'harga' => '6000000' * ('10' * '15'),
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //21
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //22
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //23
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //24
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //25
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //26
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //27
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //28
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //29
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
+        ]);
+        //30
+        \App\Models\Tanah::create([
+            'jenis_klaster' => 'Maple',
+            'lebar' => '9',
+            'panjang' => '14',
+            'luas' => '9' * '14',
+            'blok' => 'A',
+            'no_rumah' => '20',
+            'harga' => '6000000' * ('9' * '14'),
         ]);
       
     }

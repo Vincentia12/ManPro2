@@ -23,6 +23,7 @@ return new class extends Migration
             $table->Integer('no_rumah');
             $table->bigInteger('harga');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

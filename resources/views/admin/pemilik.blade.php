@@ -32,12 +32,14 @@
                         <div class="form-group row">
                             <label for="tanah_id" class="col-sm-2 col-form-label">Id Tanah</label>
                             <div class="col-sm-10">
-                                <select class="form-control" name="tanah_id">
+                            <form class="form" method="get" action="{{ route('pemilik.store') }}">
+                                <select class="form-control" name="tanah_id" id="tanah_id">
                                     <option> Pilih Kepemilikan </option>
                                     @foreach ($tanah as $item)
-                                    <option value="{{$item->id}}">{{ $item->jenis_klaster }}</option>
+                                    <option value="{{$item->id}}">{{ $item->jenis_klaster,}} {{$item->blok}} / {{$item->no_rumah }}</option>
                                     @endforeach
                                 </select>
+                            </form>
                             </div>
                             <small class="text-danger">{{ $errors->first('tanah_id') }}</small>
                         </div>

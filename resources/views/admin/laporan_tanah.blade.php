@@ -19,7 +19,8 @@
             @endif
         </div>
 
-        <table id="data1" class="table table-bordered" cellspacing="0">
+        <table id="data1" class="table table-bordered" cellspacing="0" style="text-align: center">
+            {{-- <thead style="background-color: #9eb0b3; "> --}}
             <thead>
                 <tr>
                     <th>

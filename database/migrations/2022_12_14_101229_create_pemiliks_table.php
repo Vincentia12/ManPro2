@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('no_tlp');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

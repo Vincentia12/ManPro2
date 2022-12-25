@@ -15,11 +15,11 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="h3 mb-0 font-weight-bold text-gray-900">7</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-900">{{$tanah}}</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">Total Tanah</div>
                     </div>
                     <div class="col-auto">
-                        {{-- <i class="fa-duotone fa-circle-caret-right"></i> --}}
+                        <!-- <i class="fa-duotone fa-circle-caret-right"></i> -->
                         <i class="fa-solid fa-circle-chevron-right"></i>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="h3 mb-0 font-weight-bold text-gray-900">7</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-900">{{$pemilik}}</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">Total Tanah yang Sudah ada Pemilik</div>
                     </div>
                     <div class="col-auto">
@@ -51,7 +51,7 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="h3 mb-0 font-weight-bold text-gray-900">7</div>
+                        <div class="h3 mb-0 font-weight-bold text-gray-900">{{$tanah - $pemilik}}</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">Total Tanah Belum Ada Pemilik</div>
                     </div>
                     <div class="col-auto">
@@ -63,6 +63,8 @@
     </div>
 
 </div>
+
+
 
 <!-- Content Row -->
 {{-- <div class="row">
@@ -125,3 +127,20 @@
 
                     
 @endsection
+<script>
+    var nomor = $data->no_tanggal[];
+
+var genap = [];
+var ganjil = [];
+var i = 0;
+
+	for(i; i <nomor.length; i++){
+		if (nomor[i] % 2 == 0) {
+			genap.push(nomor[i]);
+		}else{
+			ganjil.push(nomor[i]);
+		}
+	}
+		console.log(genap);
+		console.log(ganjil);
+</script>

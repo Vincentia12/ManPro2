@@ -105,8 +105,8 @@
                     <div class="mb-4">
                         <label for="message-text" class="col-form-label">Jenis Cluster</label>
                         <select class="form-control" name="tanah_id">
-                            <option value="{{$pmk->jenis_klaster}}">-{{ $pmk->tanah->jenis_klaster }} Blok {{ $pmk->tanah->blok }} / {{ $pmk->tanah->no_rumah }}</option>
-                            <option value=""></option>
+                            <option value="{{$item->id}}">-{{ $item->tanah->jenis_klaster }} Blok {{ $item->tanah->blok }} / {{ $item->tanah->no_rumah }}</option>
+                            <option ><br></option>
                             <option value="">Pilih Jenis Cluster</option>
                             @foreach ($tanah as $item)
                             <option value="{{$item->id}}">{{ $item->jenis_klaster}} Blok {{ $item->blok}} / {{ $item->no_rumah}}</option>
